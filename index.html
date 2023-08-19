@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    
+    <div class="container">
+        <h1>Student Management CRUD</h1>
+
+        <!-- Add stdudent by filling their information -->
+        <form action="/add" method="post" autocomplete="off" class="main-form">
+            <div class="input-container">
+                <input type="text" placeholder="Name" name="name">
+                <input type="text" placeholder="Email" name="email">
+                <input type="number" max="10" min="0" placeholder="GPA" name="gpa">
+                <input type="number" min="3" placeholder="Age" name="age">
+                <input type="text" placeholder="Degree" name="degree">
+            </div>
+
+            <input value="Add Student" name="submit" type="submit">
+        </form>
+
+        <!-- Search any student by their information -->
+        <form action="/search" method="get" class="search" class="search-form">
+            <input type="search" placeholder="Search by name, email or degree" name="search">
+        </form>
+
+        <!-- Student data will be rendered here using JavaScript -->
+        <table class="student-data">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Student Name</th>
+                    <th>Email</th>
+                    <th>Age</th>
+                    <th>GPA</th>
+                    <th>Degree</th>
+                </tr>
+            </thead>
+            <tbody> </tbody>
+        </table>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
